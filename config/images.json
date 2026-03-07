@@ -1,0 +1,37 @@
+{
+  "ubuntu22": {
+    "name": "Ubuntu 22.04 LTS",
+    "url": "https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img",
+    "file": "ubuntu22.qcow2",
+    "format": "qcow2",
+    "os_variant": "ubuntu22.04"
+  },
+  "ubuntu24": {
+    "name": "Ubuntu 24.04 LTS",
+    "url": "https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.img",
+    "file": "ubuntu24.qcow2",
+    "format": "qcow2",
+    "os_variant": "ubuntu24.04"
+  },
+  "debian12": {
+    "name": "Debian 12 Bookworm",
+    "url": "https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-genericcloud-amd64.qcow2",
+    "file": "debian12.qcow2",
+    "format": "qcow2",
+    "os_variant": "debian12"
+  },
+  "rocky9": {
+    "name": "Rocky Linux 9",
+    "url": "https://dl.rockylinux.org/pub/rocky/9/images/x86_64/Rocky-9-GenericCloud.latest.x86_64.qcow2",
+    "file": "rocky9.qcow2",
+    "format": "qcow2",
+    "os_variant": "rocky9"
+  },
+  "alma9": {
+    "name": "AlmaLinux 9",
+    "url": "https://repo.almalinux.org/almalinux/9/cloud/x86_64/images/AlmaLinux-9-GenericCloud.latest.x86_64.qcow2",
+    "file": "alma9.qcow2",
+    "format": "qcow2",
+    "os_variant": "almalinux9"
+  }
+}
