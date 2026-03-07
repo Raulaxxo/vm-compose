@@ -1,0 +1,43 @@
+# Vmfile para Manjaro Linux personalizado
+# Basado en una imagen de ArchLinux o adaptado según disponibilidad
+
+NAME "Manjaro Linux Personalizado"
+FROM ubuntu24
+OUTPUT manjaro-custom.qcow2
+FORMAT qcow2
+OS_VARIANT manjaro
+
+# Capa 1: Sistema base
+LAYER base-system
+RUN
+pacman-key --init
+pacman-key --populate archlinux manjaro
+pacman -Syu --noconfirm
+
+# Capa 2: Herramientas desarrollo
+LAYER development-tools
+PACKAGES
+base-devel
+git
+vim
+openssh
+curl
+wget
+htop
+
+RUN
+systemctl enable sshd
+useradd -m -s /bin/bash developer
+usermod -aG wheel developer
+echo '%wheel ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+
+# Capa 3: Desktop (opcional)
+LAYER desktop-environment
+PACKAGES
+xorg-server
+xfce4
+lightdm
+lightdm-greeter-lightdm-gtk-greeter
+
+RUN
+systemctl enable lightdm

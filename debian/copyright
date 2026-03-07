@@ -1,0 +1,6 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: vm-manager
+Source: https://github.com/namishh/vm-manager
+Files: *
+Copyright: 2024 namishh
+License: MIT

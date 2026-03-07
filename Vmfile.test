@@ -1,0 +1,11 @@
+# Vmfile simple para test - sin descargas externas
+NAME "Ubuntu 22.04 Test"
+FROM ubuntu22
+OUTPUT ubuntu-test.qcow2
+FORMAT qcow2
+OS_VARIANT ubuntu22.04
+
+LAYER setup
+RUN
+mkdir -p /root/.ssh
+echo "✓ VM personalizada creada correctamente" > /etc/motd

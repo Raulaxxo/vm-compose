@@ -1,0 +1,15 @@
+Source: vm-manager
+Section: utils
+Priority: optional
+Maintainer: namishh <your-email@example.com>
+Homepage: https://github.com/namishh/vm-manager
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13), golang-go, git
+
+Package: vm-manager
+Architecture: amd64 arm64
+Depends: ${shlibs:Depends}, ${misc:Depends}, qemu-kvm, libvirt-daemon-system, virtinst, cloud-image-utils
+Description: CLI tool for automated KVM virtual machine management
+ vm-manager is a command-line tool for managing virtual machines with KVM/libvirt.
+ It provides an easy interface to create, build, list and manage VMs with predefined
+ configurations using Vmfiles.

@@ -1,0 +1,50 @@
+# Vmfile para construir una imagen personalizada de Ubuntu 24.04
+# Similar a Dockerfile pero para máquinas virtuales QCOW2
+# Uso: vm build ./Vmfile
+
+NAME "Ubuntu 22.04 Personalizado - Servidor Web"
+FROM ubuntu22
+OUTPUT ubuntu-webserver.qcow2
+FORMAT qcow2
+OS_VARIANT ubuntu22.04
+
+# Capa 1: Actualizar sistema
+LAYER system-update
+RUN
+apt update && apt upgrade -y
+
+# Capa 2: Herramientas de desarrollo
+LAYER dev-tools
+PACKAGES
+vim
+curl
+git
+wget
+net-tools
+htop
+build-essential
+openssh-server
+
+RUN
+systemctl enable ssh
+
+# Capa 3: Servidor web
+LAYER webserver
+PACKAGES
+nginx
+php-fpm
+mysql-client
+
+RUN
+systemctl enable nginx
+mkdir -p /var/www/html
+chown -R www-data:www-data /var/www/html
+echo "✓ Servidor web configurado" > /var/www/html/index.html
+
+# Capa 4: Usuarios y configuración
+LAYER users-config
+RUN
+useradd -m -s /bin/bash developer
+usermod -aG sudo developer
+echo 'developer ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config

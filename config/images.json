@@ -33,5 +33,12 @@
     "file": "alma9.qcow2",
     "format": "qcow2",
     "os_variant": "almalinux9"
+  },
+  "ubuntu-test": {
+    "name": "Ubuntu 22.04 Personalizado Test",
+    "url": "local",
+    "file": "ubuntu-test.qcow2",
+    "format": "qcow2",
+    "os_variant": "ubuntu22.04"
   }
 }

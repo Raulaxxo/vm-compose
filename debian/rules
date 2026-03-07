@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+
+%:
+	dh $@ 
+
+override_dh_auto_build:
+	go build -ldflags="-s -w" -o build/vm .
+
+override_dh_auto_install:
+	mkdir -p debian/vm-manager/usr/local/bin
+	cp build/vm debian/vm-manager/usr/local/bin/vm
+
+override_dh_auto_test:
+	go test ./...
