@@ -1,6 +1,18 @@
-# vm-manager
+# vm-compose
 
-Herramienta CLI para gestión automatizada de máquinas virtuales con KVM.
+Herramienta CLI para gestión automatizada de máquinas virtuales con KVM/libvirt. Crea, gestiona y personaliza VMs de forma sencilla usando configuraciones YAML y Vmfiles (similar a Dockerfiles).
+
+**Versión:** 1.0.0 | **License:** MIT
+
+## Características
+
+- ✅ **Descarga de imágenes base** - Ubuntu, Debian, Rocky Linux, AlmaLinux
+- ✅ **Creación ágil de VMs** - Con SSH key o password
+- ✅ **Vmfiles** - Construye imágenes personalizadas como en Docker
+- ✅ **SSH directo** - Conecta sin conocer IPs: `vm ssh mi-vm`
+- ✅ **Gestión completa** - Start, stop, delete, listar VMs
+- ✅ **Configuración flexible** - RAM, CPUs, disco personalizables
+- ✅ **Paquete Debian** - Instalación fácil
 
 ## Requisitos
 
@@ -19,8 +31,8 @@ sudo usermod -aG libvirt $USER
 ## Instalación
 
 ```bash
-git clone https://github.com/namishh/vm-manager
-cd vm-manager
+git clone https://github.com/Raulaxxo/vm-compose
+cd vm-compose
 
 make deps
 make install
@@ -131,3 +143,37 @@ vm:
   default_disk: 20
   network: default
 ```
+
+## Licencia
+
+Este proyecto está bajo la licencia **MIT**. Ver [LICENSE](./LICENSE) para más detalles.
+
+## Autor
+
+**Raulaxxo** - [GitHub](https://github.com/Raulaxxo)
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## Soporte
+
+Si encuentras problemas o tienes sugerencias, abre un [issue en GitHub](https://github.com/Raulaxxo/vm-compose/issues).
+
+## Roadmap
+
+- [ ] Soporte para más distribuciones (Fedora, CentOS)
+- [ ] Snapshots y clonación de VMs
+- [ ] Gestión de redes personalizadas
+- [ ] UI web opcional
+- [ ] Integración con Ansible
+
+---
+
+Hecho con ❤️ por Raulaxxo

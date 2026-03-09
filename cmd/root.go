@@ -1,3 +1,6 @@
+// Copyright (c) 2024 Raulaxxo
+// Licensed under the MIT License
+
 package cmd
 
 import (
@@ -105,8 +108,8 @@ func setDefaults() {
 	viper.SetDefault("images_catalog", baseDir+"/images.json")
 
 	// Valores por defecto para nuevas VMs
-	viper.SetDefault("vm.default_ram", 2048)   // MB
+	viper.SetDefault("vm.default_ram", 2048) // MB
 	viper.SetDefault("vm.default_cpus", 2)
-	viper.SetDefault("vm.default_disk", 20)    // GB
-	viper.SetDefault("vm.network", "default")  // red NAT de libvirt
+	viper.SetDefault("vm.default_disk", 20)   // GB
+	viper.SetDefault("vm.network", "default") // red NAT de libvirt
 }

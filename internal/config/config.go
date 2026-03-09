@@ -1,3 +1,6 @@
+// Copyright (c) 2024 Raulaxxo
+// Licensed under the MIT License
+
 package config
 
 import (
@@ -19,15 +22,15 @@ type ImageEntry struct {
 
 // Config contiene toda la configuración de la aplicación
 type Config struct {
-	BaseDir        string
-	ImagesDir      string
-	VMsDir         string
-	ImagesCatalog  string
-	DefaultRAM     int
-	DefaultCPUs    int
-	DefaultDisk    int
-	Network        string
-	Images         map[string]ImageEntry
+	BaseDir       string
+	ImagesDir     string
+	VMsDir        string
+	ImagesCatalog string
+	DefaultRAM    int
+	DefaultCPUs   int
+	DefaultDisk   int
+	Network       string
+	Images        map[string]ImageEntry
 }
 
 // Load carga la configuración desde viper y el catálogo de imágenes

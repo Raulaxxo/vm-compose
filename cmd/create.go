@@ -3,8 +3,8 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/namishh/vm-manager/internal/config"
-	"github.com/namishh/vm-manager/internal/kvm"
+	"github.com/Raulaxxo/vm-compose/internal/config"
+	"github.com/Raulaxxo/vm-compose/internal/kvm"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

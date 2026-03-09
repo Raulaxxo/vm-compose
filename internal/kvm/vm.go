@@ -1,3 +1,6 @@
+// Copyright (c) 2024 Raulaxxo
+// Licensed under the MIT License
+
 package kvm
 
 import (
@@ -6,7 +9,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/namishh/vm-manager/internal/config"
+	"github.com/Raulaxxo/vm-compose/internal/config"
 )
 
 // VMOptions opciones para crear una nueva VM

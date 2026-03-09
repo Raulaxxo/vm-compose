@@ -1,8 +1,8 @@
 Source: vm-manager
 Section: utils
 Priority: optional
-Maintainer: namishh <your-email@example.com>
-Homepage: https://github.com/namishh/vm-manager
+Maintainer: Raulaxxo <your-email@example.com>
+Homepage: https://github.com/Raulaxxo/vm-compose
 Standards-Version: 4.6.1
 Build-Depends: debhelper-compat (= 13), golang-go, git
 

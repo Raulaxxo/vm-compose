@@ -1,3 +1,6 @@
+// Copyright (c) 2024 Raulaxxo
+// Licensed under the MIT License
+
 package kvm
 
 import (
@@ -7,7 +10,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/namishh/vm-manager/internal/config"
+	"github.com/Raulaxxo/vm-compose/internal/config"
 )
 
 // progressWriter trackea el progreso de la descarga

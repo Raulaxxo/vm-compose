@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/Raulaxxo/vm-compose/internal/kvm"
 	"github.com/jedib0t/go-pretty/v6/table"
 	"github.com/jedib0t/go-pretty/v6/text"
-	"github.com/namishh/vm-manager/internal/kvm"
 	"github.com/spf13/cobra"
 )
 

@@ -39,8 +39,8 @@ Section: utils
 Priority: optional
 Architecture: amd64
 Depends: qemu-kvm, libvirt-daemon-system, virtinst, cloud-image-utils
-Maintainer: namishh <your-email@example.com>
-Homepage: https://github.com/namishh/vm-manager
+Maintainer: Raulaxxo <your-email@example.com>
+Homepage: https://github.com/Raulaxxo/vm-compose
 Description: CLI tool for automated KVM virtual machine management
  vm-manager is a command-line tool for managing virtual machines with KVM/libvirt.
  It provides an easy interface to create, build, list and manage VMs with predefined
@@ -86,4 +86,9 @@ Para compilar el paquete necesitas:
 En Ubuntu/Debian:
 ```bash
 sudo apt-get install golang-go build-essential dpkg-dev fakeroot
+
+
+wget https://github.com/Raulaxxo/vm-compose/releases/download/latest/vm-manager_1.0.0_amd64.deb 
+
+dpkg -i vm-manager_1.0.0_amd64.deb 
 ```

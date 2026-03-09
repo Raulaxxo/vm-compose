@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/namishh/vm-manager/internal/config"
-	"github.com/namishh/vm-manager/internal/vmfile"
+	"github.com/Raulaxxo/vm-compose/internal/config"
+	"github.com/Raulaxxo/vm-compose/internal/vmfile"
 	"github.com/spf13/cobra"
 )
 

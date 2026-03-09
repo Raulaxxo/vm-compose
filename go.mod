@@ -1,4 +1,4 @@
-module github.com/namishh/vm-manager
+module github.com/Raulaxxo/vm-compose
 
 go 1.22
 
